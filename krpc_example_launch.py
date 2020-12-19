@@ -6,7 +6,7 @@ turn_start_altitude = 250
 turn_end_altitude = 45000
 target_altitude = 150000
 
-conn = krpc.connect(name="Launch Into Orbit", address="192.168.1.178")
+conn = krpc.connect(name="Launch Into Orbit")
 vessel = conn.space_center.active_vessel
 
 ut = conn.add_stream(getattr, conn.space_center, "ut")
