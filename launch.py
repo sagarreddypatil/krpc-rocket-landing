@@ -153,7 +153,10 @@ while runmode != -1:
             runmode = 8
             continue
     if runmode == 8:
-        if node_dv() < 5:
+        if node_dv() < 0.5:
             vessel.control.throttle = 0
+            circularization_node.remove()
+            vessel.auto_pilot.disengage()
+            vessel.control.sas = True
             runmode = -1
             continue
